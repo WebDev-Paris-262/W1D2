@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<style>
+			h1 {
+				transition: color 1s ease-in-out;
+			}
+			h1:hover {
+				color: dodgerblue;
+			}
+
+			.box {
+				height: 50px;
+				aspect-ratio: 1;
+				background-color: green;
+				border: 1px solid black;
+				transition: all 800ms ease-in-out;
+			}
+
+			.box:hover {
+				height: 200px;
+				/* rotate: 900deg; */
+			}
+
+			.sad-link {
+				display: block;
+				transition: translate 1s;
+			}
+			.sad-link:hover {
+				translate: 0 -10px;
+				transition: translate 0.2s;
+				/* transform: translateY(-50px); */
+			}
+
+			.container {
+				border: 1px solid black;
+				margin: 1rem;
+				padding: 1rem;
+				background-color: azure;
+			}
+
+			.container:has(p.important) {
+				background-color: rgb(222, 163, 163);
+			}
+
+			.container:has(p.important) p:nth-of-type(2) {
+				color: red;
+			}
+
+			/* p:nth-of-type(2) {
+				color: red;
+			} */
+		</style>
+
+		<h1>Hover me</h1>
+
+		<div class="box"></div>
+
+		<a class="sad-link" href="">Click me</a>
+
+		<div class="container">
+			<p class="important">Lorem ipsum dolor sit amet.</p>
+			<p>Lorem ipsum dolor sit amet.</p>
+			<p>Lorem ipsum dolor sit amet.</p>
+			<p>Lorem ipsum dolor sit amet.</p>
+			<p>Lorem ipsum dolor sit amet.</p>
+		</div>
+
+		<div class="container">
+			<p>
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione,
+				nulla.
+			</p>
+			<p>Lorem ipsum dolor sit amet.</p>
+			<p>Lorem ipsum dolor sit amet.</p>
+		</div>
+	</body>
+</html>

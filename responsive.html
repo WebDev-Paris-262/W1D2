@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<style>
+			h1 {
+				text-align: center;
+				/* font-size: 1.9rem; */
+				/* transition: all 1s; */
+				font-size: clamp(1.9rem, 4vw + 1rem, 4rem);
+			}
+			#burger {
+				width: 20px;
+			}
+			#links {
+				display: none;
+			}
+
+			@media (width >= 480px) {
+				#burger {
+					display: none;
+				}
+				#links {
+					display: block;
+				}
+				h1 {
+					text-align: left;
+					/* font-size: 2.2rem; */
+				}
+			}
+
+			@media (550px < width < 700px) {
+				h1 {
+					color: green;
+				}
+			}
+			.big-font {
+				font-size: 10px;
+			}
+			.small-font {
+				font-size: 10px;
+			}
+
+			.big-font p {
+				font-size: 2rem;
+			}
+			.small-font p {
+				font-size: 2em;
+			}
+		</style>
+		<nav>
+			<h1>My title</h1>
+			<img src="./images/burger-menu-svgrepo-com.svg" id="burger" alt="" />
+			<ul id="links">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+
+		<div class="big-font"><p>Lorem ipsum dolor sit amet.</p></div>
+		<div class="small-font"><p>Lorem ipsum dolor sit amet.</p></div>
+	</body>
+</html>

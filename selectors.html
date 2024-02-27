@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<style>
+			.container {
+				background-color: blue;
+				height: 50px;
+			}
+			[class="container"] {
+				background-color: red;
+			}
+
+			a[href*="https"] {
+				color: green;
+			}
+			a[href="#"] {
+				color: gray;
+				font-style: italic;
+				pointer-events: none;
+				cursor: not-allowed;
+			}
+		</style>
+
+		<div class="container"></div>
+
+		<a href="http://ironhack.com">Ironhack</a>
+		<a href="https://google.com">Google</a>
+		<a href="#">WIP</a>
+		<a href="https://other-site.com">Other</a>
+	</body>
+</html>
